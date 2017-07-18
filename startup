@@ -1,5 +1,5 @@
 #!bin/sh
-#
+# 
 # Connect VPN using defined server and user credentials
 BLACKVPN_USERNAME=''
 BLACKVPN_PASSWORD=''
