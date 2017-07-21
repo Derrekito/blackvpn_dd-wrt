@@ -3,8 +3,8 @@
 # Connect VPN using defined server and user credentials
 mkdir /tmp/blackvpn
 touch /tmp/blackvpn/temp
-BLACKVPN_USERNAME='b4978347'
-BLACKVPN_PASSWORD='2Egcfy7eE'
+BLACKVPN_USERNAME=''
+BLACKVPN_PASSWORD=''
 BLACKVPN_LOCATION='Estonia'
 BLACKVPN_PROTOCOL='udp'
 BLACKVPN_PORT='443'
