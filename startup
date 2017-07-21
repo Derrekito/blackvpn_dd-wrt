@@ -1,8 +1,10 @@
-#!bin/sh
+#!/bin/bash
 #
 # Connect VPN using defined server and user credentials
-BLACKVPN_USERNAME=''
-BLACKVPN_PASSWORD=''
+mkdir /tmp/blackvpn
+touch /tmp/blackvpn/temp
+BLACKVPN_USERNAME='b4978347'
+BLACKVPN_PASSWORD='2Egcfy7eE'
 BLACKVPN_LOCATION='Estonia'
 BLACKVPN_PROTOCOL='udp'
 BLACKVPN_PORT='443'
@@ -28,95 +30,95 @@ BLACKVPN_PORT='443'
 # USA Central:      central.vpn.blackvpn.com
 # USA East:         eastcoast.vpn.blackvpn.com
 # USA West:         westcoast.vpn.blackvpn.com
-case "$BLACKVPN_LOCATION" in
-'Australia' )
-  BLACKVPN_SERVER="australia.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=au
-  ;;
-'Brazil' )
-  BLACKVPN_SERVER="brazil.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=br
-  ;;
-'Canada' )
-  BLACKVPN_SERVER="ca.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=ca
-  ;;
-'Czech' | 'Czech Republic' )
-  BLACKVPN_SERVER="czech.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=cz
-  ;;
-'Estonia' )
-  echo "choosing Estonia"
-  BLACKVPN_SERVER="vpn.blackvpn.ee"
-  BLACKVPN_TLSREMOTE=es
-  ;;
-'France' )
-  BLACKVPN_SERVER="vpn.blackvpn.fr"
-  BLACKVPN_TLSREMOTE=fr
-  ;;
-'Germany' )
-  BLACKVPN_SERVER="vpn.blackvpn.de"
-  BLACKVPN_TLSREMOTE=de
-  ;;
-'Japan' )
-  BLACKVPN_SERVER="japan.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=jp
-  ;;
-'Lithuania' )
-  BLACKVPN_SERVER="vpn.blackvpn.lt"
-  BLACKVPN_TLSREMOTE=lt
-  ;;
-'Luxembourg' )
-  BLACKVPN_SERVER="vpn.blackvpn.lu"
-  BLACKVPN_TLSREMOTE=lu
-  ;;
-'Netherlands' )
-  BLACKVPN_SERVER="vpn.blackvpn.nl"
-  BLACKVPN_TLSREMOTE=nl
-  ;;
-'Norway' )
-  BLACKVPN_SERVER="norway.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=no
-  ;;
-'Romania' )
-  BLACKVPN_SERVER="vpn.blackvpn.ro"
-  BLACKVPN_TLSREMOTE=ro
-  ;;
-'Russia' )
-  BLACKVPN_SERVER="vpn.blackvpn.ru"
-  BLACKVPN_TLSREMOTE=ru
-  ;;
-'Spain' )
-  BLACKVPN_SERVER="spain.vpn.blackvpn.com"
-  BLACKVPN_TLSREMOTE=es
-  ;;
-'Switzerland' )
-  BLACKVPN_SERVER="vpn.blackvpn.ch"
-  BLACKVPN_TLSREMOTE=ch
-  ;;
-'Ukraine' )
-  BLACKVPN_SERVER="vpn.blackvpn.com.ua"
-  BLACKVPN_TLSREMOTE=ua
-  ;;
-'United Kingdom' | 'UK' )
-  BLACKVPN_SERVER="vpn.blackvpn.co.uk"
-  BLACKVPN_TLS=uk
-  ;;
-'USA Central' )
-  BLACKVPN_SERVER="central.vpn.blackvpn.com"
-  BLACKVPN_TLS=usa
-  ;;
-'USA East' )
-  BLACKVPN_SERVER="eastcoast.vpn.blackvpn.com"
-  BLACKVPN_TLS=usa
-  ;;
-'USA West' )
-  BLACKVPN_SERVER="westcoast.vpn.blackvpn.com"
-  BLACKVPN_TLS=usa
-  ;;
-*)
-  echo "no matching server"
-  exit 1
+case $BLACKVPN_LOCATION in
+	'Australia' )
+  		BLACKVPN_SERVER="australia.vpn.blackvpn.com"
+  		BLACKVPN_TLSREMOTE=au
+  		;;
+	'Brazil' )
+		BLACKVPN_SERVER="brazil.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=br
+		;;
+	'Canada' )
+		BLACKVPN_SERVER="ca.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=ca
+		;;
+	'Czech' | 'Czech Republic' )
+		BLACKVPN_SERVER="czech.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=cz
+		;;
+	'Estonia' )
+		echo "choosing Estonia"
+		BLACKVPN_SERVER="vpn.blackvpn.ee"
+		BLACKVPN_TLSREMOTE=es
+		;;
+	'France' )
+		BLACKVPN_SERVER="vpn.blackvpn.fr"
+		BLACKVPN_TLSREMOTE=fr
+		;;
+	'Germany' )
+		BLACKVPN_SERVER="vpn.blackvpn.de"
+		BLACKVPN_TLSREMOTE=de
+		;;
+	'Japan' )
+		BLACKVPN_SERVER="japan.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=jp
+		;;
+	'Lithuania' )
+		BLACKVPN_SERVER="vpn.blackvpn.lt"
+		BLACKVPN_TLSREMOTE=lt
+		;;
+	'Luxembourg' )
+		BLACKVPN_SERVER="vpn.blackvpn.lu"
+		BLACKVPN_TLSREMOTE=lu
+	;;
+	'Netherlands' )
+		BLACKVPN_SERVER="vpn.blackvpn.nl"
+		BLACKVPN_TLSREMOTE=nl
+		;;
+	'Norway' )
+		BLACKVPN_SERVER="norway.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=no
+		;;
+	'Romania' )
+		BLACKVPN_SERVER="vpn.blackvpn.ro"
+		BLACKVPN_TLSREMOTE=ro
+		;;
+	'Russia' )
+		BLACKVPN_SERVER="vpn.blackvpn.ru"
+		BLACKVPN_TLSREMOTE=ru
+		;;
+	'Spain' )
+		BLACKVPN_SERVER="spain.vpn.blackvpn.com"
+		BLACKVPN_TLSREMOTE=es
+		;;
+	'Switzerland' )
+		BLACKVPN_SERVER="vpn.blackvpn.ch"
+		BLACKVPN_TLSREMOTE=ch
+		;;
+	'Ukraine' )
+		BLACKVPN_SERVER="vpn.blackvpn.com.ua"
+		BLACKVPN_TLSREMOTE=ua
+		;;
+	'United Kingdom' | 'UK' )
+		BLACKVPN_SERVER="vpn.blackvpn.co.uk"
+		BLACKVPN_TLS=uk
+		;;
+	'USA Central' )
+		BLACKVPN_SERVER="central.vpn.blackvpn.com"
+		BLACKVPN_TLS=usa
+		;;
+	'USA East' )
+		BLACKVPN_SERVER="eastcoast.vpn.blackvpn.com"
+		BLACKVPN_TLS=usa
+		;;
+	'USA West' )
+		BLACKVPN_SERVER="westcoast.vpn.blackvpn.com"
+		BLACKVPN_TLS=usa
+		;;
+	*)
+	echo "no matching server"
+	exit 1
 esac
 # Turn OFF DNSMasq for DNS to prevent DNS leaks
 nvram set dns_dnsmasq=0
@@ -126,13 +128,14 @@ nvram set wan_dns=172.31.0.1
 nvram set syslogd_rem_ip=
 nvram set syslogd_enable=1
 nvram commit
-#S tart VPN setup...
-#mkdir /tmp/blackvpn
+#Start VPN setup...
+mkdir /bin/blackvpn
 cat > /tmp/blackvpn/user.txt << MARK1
 $BLACKVPN_USERNAME
 $BLACKVPN_PASSWORD
 MARK1
 chmod 0600 /tmp/blackvpn/user.txt
+mkdir /tmp/blackvpn
 cat > /tmp/blackvpn/blackvpn.conf << MARK2
 client
 dev tun
